@@ -1,7 +1,7 @@
 const Filter = () => {
   return (
     <div className="mt-12 flex justify-between">
-      <div className="flex gap-6">
+      <div className="flex gap-6 flex-wrap">
         <select
           name="type"
           id=""
@@ -11,6 +11,18 @@ const Filter = () => {
           <option value="physical">Physical</option>
           <option value="digital">Digital</option>
         </select>
+        <input
+          type="text"
+          name="min"
+          placeholder="min price"
+          className="text-xs rounded-2xl pl-2 w-24 ring-l ring-gray-400"
+        />
+        <input
+          type="text"
+          name="max"
+          placeholder="max price"
+          className="text-xs rounded-2xl pl-2 w-24 ring-l ring-gray-400"
+        />
         <select
           name="size"
           id=""
@@ -44,7 +56,19 @@ const Filter = () => {
           <option>All Filters</option>
         </select>
       </div>
-      <div className=""></div>
+      <div className="">
+        <select
+          name=""
+          id=""
+          className="py-2 px-4 rounded-2xl text-xs font-medium bg-white ring-1 ring-gray-400"
+        >
+          <option>Sort by</option>
+          <option value="">Price (low to high)</option>
+          <option value="">Popular (high to low)</option>
+          <option value="">Newest</option>
+          <option value="">Oldest</option>
+        </select>
+      </div>
     </div>
   );
 };
